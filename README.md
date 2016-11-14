@@ -5,7 +5,7 @@ angular2入门教程，基于官网案例整合而成。
 
  1.angular2要求 node v5.x.x 或更高版本以及 npm 3.x.x 或更高版本。
      
-        作者的电脑环境是 Windows7，npm版本3.10.9，node版本6.7.0。
+        作者的电脑环境是 Windows7，npm版本3.10.9，node版本6.7.0，使用的编辑器VS-CODE。
    
  2.创建一个文件夹test-ng，把资源列表中package.json ，tsconfig.json，systemjs.config.js三个文件下载下来。  
 
@@ -19,39 +19,108 @@ angular2入门教程，基于官网案例整合而成。
 
  3.先翻墙或开VPN，然后从命令行进入到test-ng，输入 npm install安装依赖包。
   
-    翻不了墙的同学直接下载node-modules文件到test-ng中即可。
+    翻不了墙的同学直接下载资源列表中node-modules文件到test-ng中即可。
     
  ## 第二步 创建基础组件
  
- 1.  在test-ng文件夹中创建文件index.html
+ 1.  对照作者提供的源文件index.html在test-ng中创建一个相同的index.html文件。
  
-     `
-  <!DOCTYPE html>
-<html>
-  <head>
-    <base href="/"> <!--路由-->
-    <title>Angular QuickStart</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
-
-    <script src="https://unpkg.com/core-js/client/shim.min.js"></script> <!--为老式浏览器提供的填充库-->
-    <script src="https://unpkg.com/zone.js@0.6.25?main=browser"></script>
-    <script src="https://unpkg.com/reflect-metadata@0.1.3"></script>
-    <script src="https://unpkg.com/systemjs@0.19.27/dist/system.src.js"></script> <!--加载并运行模块-->
-    <script src="systemjs.config.js"></script> <!--运行main.js,为模块加载器提供了该到哪里查找应用模块的信息，并注册了所有必备的依赖包-->
+     这个HTML基本每一行都写了注释，大概思路就是在头文件先引入angular2需要的js库，在引入配置文件systemjs，最后在body中导入名为<my-app>的模板
+     
+     可以下载列表中的style.css到test-ng中，作为index.html的样式表。
+     
+ 2.  在test-ng中创建文件夹app，在app文件夹中对照源代码的main.ts创建文件  main.ts。
       
-    <script>
-      System.import('app').catch(function(err){ console.error(err); });
-    </script>
-  </head>
+      当启动angular2应用时，浏览器会加载index.html文件，在index.html中先加载angular2和其所需要的库来启动angular2，angular2再加载配置文件systemjs,
 
-  <body>
-    <my-app>Loading...</my-app>  <!--导入my-app1模板-->
-  </body>
-</html>
+      在配置文件systemjs.confing.js中会加载main.js。
+      
+      在main.js中，先import框架的一个动态生成模块，再import使用者创建的app-module模块，
+      
+      最后调用框架动态生成模块的方法bootstrapModule来启动module：app-module。
+      
+ 3.  组件介绍
+ 
+     angular2的组件主要分为三个部分构成，
 
+     头部：import所需要的模块
+     
+     中间：@装饰器   调用头部导入模块的某一个方法作为装饰器来装饰底部的类，模板放在装饰器中
+     
+     底部：export   类   这里存放一些装饰器需要用的函数和对外暴露的接口
+ 
+ 4.  在app文件夹中创建模块组件app-module.ts。
+ 
+     app-module.ts文件的内容对照源代码中的app-module.ts。
+     
+     appmodule是整个应用的入口点,由main.ts来加载。用main.ts来启动app-module的用以是为了以后测试可以用不同的启动器在不同的环境中启动模块。
+     
+     app-module组件主要是配置所需要的模块，在他的装饰器中，
+     
+     imports  添加模块，被添加的模块的方法可以被本模块使用
+     
+     declaration声明模块内部成员，
+     
+     providers声明服务模块，
+     
+     bootstrap，引导函数，后面跟的组件即为根组件即首先被加载的组件，会被渲染到dom上，本例中跟的是app-component.ts暴露的接口
+        
+ 5. 在app文件夹中创建根组件app-component.ts    
+     对照源代码创建文件app-conponent.ts,可以把其样式表app-component.css下载下来。
+     
+     在根组件中，我们配置了模板template,并把模板名命名为my-app,用styleUrls加载了样式表app.component.css
+     
+     用export把根组件的接口定义为AppComponent。
+     
+## 第三步    创建其他组件和路由
 
+ 1. 根组件只显示了效果图的头部部分，我们还需要列表和详情部分和组件间的路由
 
+    对照源文件编写app文件夹中的其他文件，其中
+    
+    mock-heroes.ts是用来模拟列表数据，app-component.ts 导航组件
+    
+    heroes.component.ts是列表元素组件，hero-detail.component.ts元素详情组件，
+    
+    hero.ts 自定义的元素数据类型组件，hero.service.ts 组件和模拟数据之间的通信服务组件，
+    
+    dashboard.conponent.ts 控制组件，描述组件和路由的关系  app-routing.module.te提供组件间的路由
 
-     `
+    除了上述组件外，作者把模板从组件中的装饰器单独分离出来了，变成.html和.css文件，组件可以通过引用来加载他们
+    
+## 第四部 启动
+
+   命令行进入到test-ng 输入 npm start 启动
+   
+   如果启动出了问题：
+   第一步： npm update -g &&  npm install -g concurrently lite-server typescript
+   
+   不行的话 第二步：
+      Change the start field in package.json from
+     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" "
+      to
+     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" "
+     地址 http://stackoverflow.com/questions/34335340/angular2-quickstart-npm-start-is-not-working-correctly
+     
+## 其他问题
+  1.如果出现 is not a module
+  
+   第一步,检查相关模块export暴露的接口大小写是否规范
+   第二步，退出vs code 重新载入，会给你定位到更具体的错误位置
+http://stackoverflow.com/questions/34629517/file-app-hero-ts-is-not-a-module-error-in-the-console-where-to-store-interfac/34674485
+
+   2.出现 can not find name promise
+    把tsconfig.json中的es5改为ES6
+    
+   3.编辑器提示 can not find mode 
+     先看浏览器报的什么错误，解决掉，如果浏览器没报错不用管。
+     或者把配置文件换成官网最新的配置文件即可
+    
+
+   
+       
+    
+    
+   
+    
+     
