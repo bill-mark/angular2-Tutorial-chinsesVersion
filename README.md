@@ -1,6 +1,10 @@
 # angular2-Tutorial-chinsesVersion
 angular2入门教程，基于官网案例整合而成。
 
+![image](https://github.com/bill-mark/angular2-Tutorial-chinsesVersion/blob/master/no1.png)
+![image](https://github.com/bill-mark/angular2-Tutorial-chinsesVersion/blob/master/no2.png)
+![image](https://github.com/bill-mark/angular2-Tutorial-chinsesVersion/blob/master/no3.png)
+
 ## 第一步 配置开发环境
 
  1.angular2要求 node v5.x.x 或更高版本以及 npm 3.x.x 或更高版本。
