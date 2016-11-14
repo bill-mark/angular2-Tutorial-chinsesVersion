@@ -18,6 +18,7 @@
     height: 1.6em;
     border-radius: 4px;
   }
+  /*教程作者 https://github.com/bill-mark/angular2-Tutorial-chinsesVersion*/
   .heroes li.selected:hover {
     background-color: #BBD8DC !important;
     color: white;

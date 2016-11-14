@@ -15,6 +15,7 @@ nav a {
   display: inline-block;
   background-color: #eee;
   border-radius: 4px;
+  /*教程作者 https://github.com/bill-mark/angular2-Tutorial-chinsesVersion*/
 }
 nav a:visited, a:link {
   color: #607D8B;

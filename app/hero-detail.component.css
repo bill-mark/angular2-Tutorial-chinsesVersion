@@ -19,6 +19,7 @@ button {
   border-radius: 4px;
   cursor: pointer; cursor: hand;
 }
+/*教程作者 https://github.com/bill-mark/angular2-Tutorial-chinsesVersion*/
 button:hover {
   background-color: #cfd8dc;
 }
