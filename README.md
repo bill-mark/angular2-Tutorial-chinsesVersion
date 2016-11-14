@@ -1,5 +1,14 @@
 # angular2-Tutorial-chinsesVersion
-angular2入门教程，基于官网案例整合而成。不适合零起点，适合了解es6相关概念的初学者。
+angular2入门教程，基于官网案例整合而成。不适合零起点，零起点建议先去了解es6相关概念，比如类，接口，常量，promise等再上手本教程。
+
+
+教程的精华主要在源代码中，几乎每一行源代码都加了注释，为什么这么做，这么做的意义。
+
+
+reademe文件主要阐述了和官网很不同的入门的顺序和对angular2相关概念做了高度抽象，对有第三代框架比如vue,react使用经验的开发者很容易上手。
+
+
+官网地址https://angular.cn/docs/ts/latest/quickstart.html  看官网教程可以和本教程提供的angular2笔记搭配着看。
 
 ![image](https://github.com/bill-mark/angular2-Tutorial-chinsesVersion/blob/master/no1.png)
 ![image](https://github.com/bill-mark/angular2-Tutorial-chinsesVersion/blob/master/no2.png)
