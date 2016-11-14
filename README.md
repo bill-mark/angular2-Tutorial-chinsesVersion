@@ -1,5 +1,5 @@
 # angular2-Tutorial-chinsesVersion
-angular2入门教程，基于官网案例整合而成。
+angular2入门教程，基于官网案例整合而成。不适合零起点，适合了解es6相关概念的初学者。
 
 ![image](https://github.com/bill-mark/angular2-Tutorial-chinsesVersion/blob/master/no1.png)
 ![image](https://github.com/bill-mark/angular2-Tutorial-chinsesVersion/blob/master/no2.png)
