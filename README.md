@@ -10,6 +10,7 @@ angular2入门教程，基于官网案例整合而成。不适合零起点，适
  1.angular2要求 node v5.x.x 或更高版本以及 npm 3.x.x 或更高版本。
      
         作者的电脑环境是 Windows7，npm版本3.10.9，node版本6.7.0，使用的编辑器VS-CODE。
+        
    
  2.创建一个文件夹test-ng，把资源列表中package.json ，tsconfig.json，systemjs.config.js三个文件下载下来。  
 
@@ -20,12 +21,13 @@ angular2入门教程，基于官网案例整合而成。不适合零起点，适
    systemjs.config.js 为模块加载器提供了该到哪里查找应用模块的信息，并注册了所有必备的依赖包。 它还包括文档中后面的例子需要用到的包。
    
    想用webpack作为模块加载器，看这里https://angular.cn/docs/ts/latest/guide/webpack.html
+   
 
  3.先翻墙或开VPN，然后从命令行进入到test-ng，输入 npm install安装依赖包。
   
-    翻不了墙的同学直接下载资源列表中node-modules文件到test-ng中即可。
+      翻不了墙的同学直接下载资源列表中node-modules文件到test-ng中即可。
     
- ## 第二步 创建基础组件
+## 第二步    创建配置文件
  
  1.  对照作者提供的源文件index.html在test-ng中创建一个相同的index.html文件。
  
@@ -35,9 +37,7 @@ angular2入门教程，基于官网案例整合而成。不适合零起点，适
      
  2.  在test-ng中创建文件夹app，在app文件夹中对照源代码的main.ts创建文件  main.ts。
       
-      当启动angular2应用时，浏览器会加载index.html文件，在index.html中先加载angular2和其所需要的库来启动angular2，angular2再加载配置文件systemjs,
-
-      在配置文件systemjs.confing.js中会加载main.js。
+      当启动angular2应用时，浏览器会加载index.html文件，在index.html中先加载angular2和其所需要的库来启动angular2，angular2再加载配置文件systemjs,在配置文件systemjs.confing.js中会加载main.js。
       
       在main.js中，先import框架的一个动态生成模块，再import使用者创建的app-module模块，
       
