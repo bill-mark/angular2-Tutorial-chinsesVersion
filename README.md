@@ -13,8 +13,7 @@ angular2入门教程，基于官网案例整合而成。
 
 如果感受到教程的诚意，麻烦右上角点个星星，谢谢亲
 
-reademe文件主要阐述了和官网很不同的入门的顺序和对angular2相关概念做了高度抽象，对有第三代框架比如vue,react使用经验的开发者很容易上手。
-
+本教程针对官网教程啰嗦，案例没有外国文化看不懂等缺点做了定制优化。
 
 官网地址https://angular.cn/docs/ts/latest/quickstart.html  看官网教程可以和本教程提供的angular2笔记搭配着看。
 
@@ -111,8 +110,9 @@ reademe文件主要阐述了和官网很不同的入门的顺序和对angular2�
     
 ## 第四部 启动
 
-   命令行进入到test-ng 输入 npm start 启动
-   
+   1.把整个项目下载下来 2把教程-服务，教程-路由移出项目 3.命令行进入到项目目录，输入 npm install 4.如果
+  npm install报错ERR，开VPN 5.没有报错，输入npm start
+  
    如果启动出了问题：
    第一步： npm update -g &&  npm install -g concurrently lite-server typescript
    
