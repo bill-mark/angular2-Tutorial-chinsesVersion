@@ -25,9 +25,8 @@ angular2入门教程，基于官网案例整合而成。
 
  1.angular2要求 node v5.x.x 或更高版本以及 npm 3.x.x 或更高版本。
      
-        作者的电脑环境是 Windows7，npm版本3.10.9，node版本6.7.0，使用的编辑器VS-CODE。
-        
-   
+        作者的电脑环境是 Windows7，npm版本3.10.9，node版本6.7.0，使用的编辑器VS-CODE。要是
+        运行项目例子，node版本不能低于6.7.0 
  2.创建一个文件夹test-ng，把资源列表中package.json ，tsconfig.json，systemjs.config.js三个文件下载下来。  
 
    package.json 用来标记出本项目所需的 npm 依赖包。
@@ -110,7 +109,7 @@ angular2入门教程，基于官网案例整合而成。
     
 ## 第四部 启动
 
-   1.把整个项目下载下来 2把教程-服务，教程-路由移出项目 3.命令行进入到项目目录，输入 npm install 4.如果
+   1.把整个项目下载下来 2把教程-服务，教程-路由这两个文件夹移出项目 3.命令行进入到项目目录，输入 npm install 4.如果
   npm install报错ERR，开VPN 5.没有报错，输入npm start
   
    如果启动出了问题：
