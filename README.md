@@ -128,6 +128,7 @@ angular2入门教程，基于官网案例整合而成。
   1.如果出现 is not a module
   
    第一步,检查相关模块export暴露的接口大小写是否规范
+   
    第二步，退出vs code 重新载入，会给你定位到更具体的错误位置
 http://stackoverflow.com/questions/34629517/file-app-hero-ts-is-not-a-module-error-in-the-console-where-to-store-interfac/34674485
 
