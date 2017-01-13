@@ -1,6 +1,7 @@
 # angular2-Tutorial-chinsesVersion
 angular2入门教程，基于官网案例整合而成。
-对学习者的要求：
+对学习者的要求：  
+
 1.上网了解下类和装饰器的关系，看看runby或者Python关于类的阐述，不要看Java和c/c++
 
 2.了解ES6相关概念和思想，教程中用到的有类，接口，继承，const,let,promise,import
@@ -13,7 +14,7 @@ angular2入门教程，基于官网案例整合而成。
 
 如果感受到教程的诚意，麻烦右上角点个星星，谢谢亲
 
-本教程针对官网教程啰嗦，案例没有外国文化看不懂等缺点做了定制优化。
+本教程主要解决没有美国文化基础理解不了官网教程开发的网站是干嘛用的做了中国化修改。
 
 官网地址https://angular.cn/docs/ts/latest/quickstart.html  看官网教程可以和本教程提供的angular2笔记搭配着看。
 
