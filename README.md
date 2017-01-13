@@ -28,6 +28,7 @@ angular2入门教程，基于官网案例整合而成。
      
         作者的电脑环境是 Windows7，npm版本3.10.9，node版本6.7.0，使用的编辑器VS-CODE。要是
         运行项目例子，node版本不能低于6.7.0 
+        
  2.创建一个文件夹test-ng，把资源列表中package.json ，tsconfig.json，systemjs.config.js三个文件下载下来。  
 
    package.json 用来标记出本项目所需的 npm 依赖包。
